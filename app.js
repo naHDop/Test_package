@@ -19,7 +19,7 @@ app.use(shopRouter);
 
 app.use((req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [GET] [ url: ${req.url} ]\n`);
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+    res.status(404).render('404', { docTitle: 'Page not found' });
 })
 
 // app.use((req, res, next) => {
