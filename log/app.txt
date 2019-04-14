@@ -31,7 +31,7 @@
 [ Sun Apr 14 2019 19:24:46 GMT+0300 (GMT+03:00) ] [GET] [ url: /shop/ ]
 [ Sun Apr 14 2019 19:24:57 GMT+0300 (GMT+03:00) ] [ server run on localhost:3000 ]
 [ Sun Apr 14 2019 19:26:11 GMT+0300 (GMT+03:00) ] [ server run on localhost:3000 ]
-server run on localhost:3000
+server run on localhost:3000asdasd
 [ Sun Apr 14 2019 19:26:42 GMT+0300 (GMT+03:00) ] [ server run on localhost:3000 ]
 [ Sun Apr 14 2019 19:26:47 GMT+0300 (GMT+03:00) ] [ server run on localhost:3000 ]
 [ Sun Apr 14 2019 19:28:37 GMT+0300 (GMT+03:00) ] [ server run on localhost:3000 ]
