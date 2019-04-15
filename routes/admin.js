@@ -11,7 +11,7 @@ const products = [];
 router.get('/add-product', (req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [GET] [ url: /admin${req.url} ]\n`);
 
-    res.render('add-product', { docTitle: 'Add Product' });
+    res.render('add-product', { docTitle: 'Add Product', path: '/admin/add-product' });
 });
 
 router.post('/add-product', (req, res, next) => {

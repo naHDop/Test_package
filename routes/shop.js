@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [GET] [ url: /shop${req.url} ]\n`);
 
     const products = adminData.products;
-    res.render('shop', { prods: products, docTitle: 'Shop' });
+    res.render('shop', { prods: products, docTitle: 'Shop', path: '/shop' });
 });
 
 module.exports = router;
