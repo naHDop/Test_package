@@ -7,9 +7,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const adminRoute   = require('./routes/admin');
-const shopRouter  = require('./routes/shop');
-const loger       = require('./helper/loger');
+const adminRoute         = require('./routes/admin');
+const shopRouter         = require('./routes/shop');
+const loger              = require('./helper/loger');
+const errorController    = require('./controllers/404');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -17,10 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/admin', adminRoute);
 app.use(shopRouter);
 
-app.use((req, res, next) => {
-    loger.addLog(`[ ${new Date()} ] [GET] [ url: ${req.url} ]\n`);
-    res.status(404).render('404', { docTitle: 'Page not found', path: '404'});
-})
+app.use(errorController.get404);
 
 // app.use((req, res, next) => {
 //     // console.log('this bloc run always !');
