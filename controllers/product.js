@@ -1,6 +1,6 @@
 const rootDir = require('../helper/path');
 const loger   = require('./../helper/loger');
-const products = [];
+const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [GET] [ url: /admin${req.url} ]\n`);
@@ -16,13 +16,15 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = (req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [POST] [ url: /admin${req.url} ]\n`);
-    products.push({ title: req.body.title })
+    const product = new Product(req.body.title);
+    product.save();
 
     res.redirect('/');
 };
 
 exports.getProducts = (req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [GET] [ url: /shop${req.url} ]\n`);
+    const products = Product.fetchAll();
 
     res.render('shop', { 
         prods: products,
