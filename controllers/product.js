@@ -1,4 +1,3 @@
-const rootDir = require('../helper/path');
 const loger   = require('./../helper/loger');
 const Product = require('../models/product');
 
