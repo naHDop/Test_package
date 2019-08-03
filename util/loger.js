@@ -1,7 +1,7 @@
 const fs         = require('fs');
 const path       = require('path');
 
-const rootDir    = require('./path');
+const rootDir    = require('../helper/path');
 
 const addLog = (data) => {
     fs.appendFile(path.join(rootDir, 'log', 'app.txt'), data, (err) => {

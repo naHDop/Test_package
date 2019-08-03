@@ -1,4 +1,4 @@
-const loger   = require('./../helper/loger');
+const loger   = require('./../util/loger');
 
 exports.get404 = (req, res, next) => {
     loger.addLog(`[ ${new Date()} ] [GET] [ url: ${req.url} ]\n`);
