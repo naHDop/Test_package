@@ -1,25 +1,25 @@
-const Sequalize = require('sequelize');
+const Sequeliser = require('sequelize');
 
 const sequelize = require('../util/database');
 
 const Product = sequelize.define('product', {
   id : {
-    type: Sequalize.INTEGER,
+    type: Sequeliser.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true
   },
-  title: Sequalize.STRING,
+  title: Sequeliser.STRING,
   price: {
-    type: Sequalize.DOUBLE,
+    type: Sequeliser.DOUBLE,
     allowNull: false,
   },
   imageUrl: {
-    type: Sequalize.STRING,
+    type: Sequeliser.STRING,
     allowNull: false
   },
-  discription: {
-    type: Sequalize.STRING,
+  description: {
+    type: Sequeliser.STRING,
     allowNull: false
   }
 });

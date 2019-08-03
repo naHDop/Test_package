@@ -1,6 +1,6 @@
-const Sequilize = require('sequelize');
+const Sequeliser = require('sequelize');
 
-const sequelize = new Sequilize(
+const sequelize = new Sequeliser(
     'node-udemy', // sheima
     'root', // login
     'password', // password
